@@ -1,0 +1,8 @@
+transformers==4.41.0
+huggingface-hub==0.23.0
+datasets==2.19.1
+pandas==2.0.3
+ipython==8.12.3
+numpy==1.24.4
+torch==2.3.0
+sacremoses
