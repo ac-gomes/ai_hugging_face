@@ -4,8 +4,6 @@ from IPython.display import display
 from datasets import load_dataset
 from transformers import pipeline
 
-# Documentatio: https://huggingface.co/docs/hub/datasets-pandas
-
 model = "t5-small"
 
 xsum_dataset = load_dataset(
@@ -20,7 +18,6 @@ summarizer = pipeline(
     min_length=20,
     max_length=40,
     truncation=True,
-
 )
 
 xsum_sample = xsum_dataset["train"].select(range(5))
@@ -34,3 +31,9 @@ display(
         ["generated_summary", "summary", "document"]
     ]
 )
+
+# Documentation:
+# https://huggingface.co/docs/transformers/en/installation
+# https://huggingface.co/docs/datasets/how_to
+# https://huggingface.co/docs/hub/datasets-pandas
+# https://huggingface.co/google-t5/t5-small
