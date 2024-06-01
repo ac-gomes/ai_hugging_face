@@ -22,10 +22,25 @@ def output_formatter(result: dict) -> str:
 def edecoded_sequence(result: str) -> str:
 
     try:
-
         if result is not None:
 
-            print(f"\ndecoded_sentence: {result} \n")
+            print(f"\n >> decoded_sentence: {result} \n")
+
+    except Exception as err:
+        print(f"Something went wrong, \n error: {err}")
+
+
+def pre_tokenizer_output_formatter(result) -> str:
+
+    try:
+        formatted_output = ""
+
+        if result is not None:
+            for item in result:
+
+                formatted_output += f'"{item[0]}", '
+
+        print(f'\n >> resultado: {formatted_output}\n')
 
     except Exception as err:
         print(f"Something went wrong, \n error: {err}")

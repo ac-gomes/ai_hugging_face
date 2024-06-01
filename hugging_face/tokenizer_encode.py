@@ -3,11 +3,14 @@ from utils import output_formatter
 from transformers import BertTokenizer
 
 model = "bert-base-uncased"
-sequence = "Wake up without being awake, wake up to live."
 
+sequence = [
+  "Hellow wold",
+  "Hello data world",
+]
 
 tokenizer = BertTokenizer.from_pretrained(model)
 
-output = tokenizer(sequence)
+output = tokenizer(sequence, padding=True)
 
 output_formatter(output.data)
