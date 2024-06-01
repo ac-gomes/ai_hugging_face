@@ -1,3 +1,4 @@
 .env
 Databricks
 huggingF_test
+__pycache__
